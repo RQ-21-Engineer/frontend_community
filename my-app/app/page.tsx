@@ -1,101 +1,183 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaInstagram, FaYoutube, FaDiscord, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex flex-col bg-black text-white">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="flex-1">
+        <section className="py-20 px-6 ml-10 mt-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-2xl">
+              <h1 className="text-6xl font-bold mb-4 text-left">Class RQ '21</h1>
+              <h2 className="text-3xl mb-8 text-left text-gray-700">
+                Computer Science & Engineering.
+              </h2>
+              <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full
+                transform transition-all duration-300 hover:scale-105 hover:shadow-lg
+                hover:animate-none flex items-center space-x-2">
+                <span>Join With Us!</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center px-6">
+              <div className="order-2 md:order-1">
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                  Welcome to RQ '21 Software Engineering Club
+                </h2>
+                <p className="text-zinc-300 leading-relaxed mb-6">
+                  Where we are dedicated to advancing technology and fostering innovation in the engineering community.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-zinc-900 p-2 rounded-full">
+                      <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p className="text-zinc-300">Find valuable projects and resources</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-zinc-900 p-2 rounded-full">
+                      <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                    <p className="text-zinc-300">Grow as a tech professional</p>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg transform rotate-6 opacity-20"></div>
+                  <Image
+                    src="/community.jpg" // Add this image to your public folder
+                    alt="Community"
+                    width={600}
+                    height={400}
+                    className="rounded-lg shadow-xl relative z-10"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="social-media" className="py-20 bg-zinc-950">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-16 relative">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Social Media
+              </span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  name: 'Instagram',
+                  icon: FaInstagram,
+                  color: 'from-pink-500 to-purple-500',
+                  link: 'https://instagram.com/rq21.se'
+                },
+                {
+                  name: 'Youtube',
+                  icon: FaYoutube,
+                  color: 'from-red-500 to-pink-500',
+                  link: 'https://youtube.com/@rq21se'
+                },
+                {
+                  name: 'Discord',
+                  icon: FaDiscord,
+                  color: 'from-indigo-500 to-purple-500',
+                  link: 'https://discord.gg/rq21se'
+                },
+                {
+                  name: 'Github',
+                  icon: FaGithub,
+                  color: 'from-gray-700 to-gray-900',
+                  link: 'https://github.com/rq21-se'
+                }
+              ].map((platform) => (
+                <Link
+                  href={platform.link}
+                  key={platform.name}
+                  className="group hover:scale-105 transition-all duration-300"
+                >
+                  <div className={`p-6 rounded-xl bg-gradient-to-br ${platform.color} shadow-lg hover:shadow-xl transition-all duration-300`}>
+                    <div className="text-3xl mb-4 text-white">
+                      <platform.icon size={32} />
+                    </div>
+                    <h3 className="text-xl text-white font-bold mb-2">{platform.name}</h3>
+                    <p className="text-sm text-gray-100">Follow us on {platform.name}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-16">
+              {[
+                {
+                  title: "Our Class",
+                  description: "Meet our talented classmates.",
+                  link: "/members",
+                  linkText: "View all students",
+                  icon: "👨‍🎓"
+                },
+                {
+                  title: "Our Gallery",
+                  description: "Capture our precious moments.",
+                  link: "/gallery",
+                  linkText: "View gallery",
+                  icon: "📸"
+                }
+              ].map((item, index) => (
+                <div key={item.title}
+                  className={`p-8 rounded-xl bg-zinc-900 border border-zinc-800`}>
+                  <div className="text-4xl mb-6">{item.icon}</div>
+                  <h3 className="text-2xl text-white font-bold mb-4">{item.title}</h3>
+                  <p className="mb-6 text-zinc-400">{item.description}</p>
+                  <Link href={item.link}
+                    className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors">
+                    {item.linkText}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-zinc-950 py-16 px-8 text-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-4">Class FAQs</h2>
+            <p className="mb-8">What's happening in our class?</p>
+            <p className="mb-8">Join our class discussions and activities.</p>
+            <form className="max-w-md mx-auto">
+              <input
+                type="text"
+                placeholder="Your Student ID..."
+                className="w-full p-3 rounded mb-4 bg-zinc-900 text-white placeholder-zinc-500 border border-zinc-800"
+              />
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-full w-full hover:bg-blue-700">
+                Join Class Group
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
