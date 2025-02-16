@@ -1,5 +1,3 @@
-export type ShapeType = 'hexagon' | 'circle' | 'rectangle' | 'triangle';
-
 export interface Member {
   id: string;
   name: string;
@@ -7,7 +5,6 @@ export interface Member {
   role: string;
   year: string;
   image: string;
-  shape: ShapeType;
   skills: string[];
   github: string;
   bio?: string;
@@ -16,10 +13,18 @@ export interface Member {
     name: string;
     description: string;
   }>;
+  quote?: string;
+  website?: string;
+  collaborators?: string[];
 }
 
-const shapes: ShapeType[] = ['hexagon', 'circle', 'rectangle', 'triangle'];
-const getRandomShape = (): ShapeType => shapes[Math.floor(Math.random() * shapes.length)];
+export const slugify = (str: string): string => {
+  return str
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Remove special characters
+    .replace(/\s+/g, '-')      // Replace spaces with hyphens
+    .replace(/-+/g, '-');      // Remove consecutive hyphens
+};
 
 export const members: Member[] = [
   {
@@ -29,9 +34,11 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'egi-saputra',
+    quote: "Programming is not about typing, it's about thinking.",
+    website: "https://egi-saputra.dev",
+    collaborators: ['1503', '1504'],
   },
   {
     id: '1503',
@@ -40,7 +47,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'rijki-syaepul',
   },
@@ -51,7 +57,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'ika-wahyuningsih',
   },
@@ -62,7 +67,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'siti-mawaddah',
   },
@@ -73,7 +77,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'albirru-ramadhan',
   },
@@ -84,7 +87,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'arya-pandya',
   },
@@ -95,7 +97,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'farden-ramzy',
   },
@@ -106,7 +107,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'al-fariqy-raihan',
   },
@@ -117,7 +117,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'muhammad-ridho',
   },
@@ -128,7 +127,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'aditya-virgi',
   },
@@ -139,7 +137,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'rozza-khaerul',
   },
@@ -150,7 +147,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'harasta-devina',
   },
@@ -161,7 +157,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'ananda-rizky',
   },
@@ -172,7 +167,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'muhammad-rizky-kusuma',
   },
@@ -183,7 +177,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'dyana-eka',
   },
@@ -194,7 +187,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'fawwaz-ramadhan',
   },
@@ -205,7 +197,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'elza-kayla',
   },
@@ -216,7 +207,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'bintang-firmansyah',
   },
@@ -227,7 +217,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'ramadhan-jihaddun',
   },
@@ -238,7 +227,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'nirwan-rosiddin',
   },
@@ -249,7 +237,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'amelia-azra',
   },
@@ -260,7 +247,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'rionggo-rahardi',
   },
@@ -271,7 +257,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'muhamad-zulfadli',
   },
@@ -282,7 +267,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'dio-sheva',
   },
@@ -293,7 +277,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'daffa-rezha',
   },
@@ -304,7 +287,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'achmad-lutfi',
   },
@@ -315,7 +297,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'rizky-ananda',
   },
@@ -326,7 +307,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'mohammad-rizkhy',
   },
@@ -337,7 +317,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'ashila-azki',
   },
@@ -348,7 +327,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'fathurahman-habibie',
   },
@@ -359,7 +337,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'rizki-dwi',
   },
@@ -370,7 +347,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'ferry-salim',
   },
@@ -381,7 +357,6 @@ export const members: Member[] = [
     role: 'Software Engineer',
     year: '2021',
     image: '/members/default-avatar.png',
-    shape: getRandomShape(),
     skills: ['Web Development'],
     github: 'andra-lazuardi',
   },

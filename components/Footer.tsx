@@ -1,35 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  FaGithub, 
-  FaDiscord, 
-  FaInstagram, 
-  FaYoutube, 
-  FaArrowRight 
+import {
+  FaGithub,
+  FaDiscord,
+  FaInstagram,
+  FaYoutube,
+  FaArrowRight
 } from "react-icons/fa";
 
 const socialLinks = [
-  { 
-    name: 'GitHub', 
-    icon: FaGithub, 
+  {
+    name: 'GitHub',
+    icon: FaGithub,
     href: 'https://github.com/rq21-se',
     hoverColor: 'hover:text-gray-100'
   },
-  { 
-    name: 'Discord', 
-    icon: FaDiscord, 
+  {
+    name: 'Discord',
+    icon: FaDiscord,
     href: 'https://discord.gg/rq21se',
     hoverColor: 'hover:text-indigo-400'
   },
-  { 
-    name: 'Instagram', 
-    icon: FaInstagram, 
+  {
+    name: 'Instagram',
+    icon: FaInstagram,
     href: 'https://instagram.com/rq21.se',
     hoverColor: 'hover:text-pink-400'
   },
-  { 
-    name: 'YouTube', 
-    icon: FaYoutube, 
+  {
+    name: 'YouTube',
+    icon: FaYoutube,
     href: 'https://youtube.com/@rq21se',
     hoverColor: 'hover:text-red-400'
   },
@@ -46,7 +46,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-2">
               <Image src="/logo3.svg" alt="RQ '21" width={40} height={40} />
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                RQ '21
+                RQ &aptos;21
               </span>
             </Link>
             <p className="text-sm text-zinc-400 leading-relaxed">
@@ -65,7 +65,7 @@ export default function Footer() {
                 { href: '/learning', label: 'Learning Path' },
               ].map(link => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-zinc-400 hover:text-blue-400 transition-colors flex items-center space-x-1 group"
                   >
@@ -83,7 +83,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {socialLinks.map(({ name, icon: Icon, href, hoverColor }) => (
                 <li key={name}>
-                  <a 
+                  <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -117,7 +117,7 @@ export default function Footer() {
         <div className="pt-8 mt-8 border-t border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-zinc-400">
-              © {new Date().getFullYear()} RQ '21 Software Engineering Club. All rights reserved.
+              © {new Date().getFullYear()} RQ &aptos;21 Software Engineering Club. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-sm text-zinc-400 hover:text-blue-400 transition-colors">

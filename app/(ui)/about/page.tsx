@@ -24,7 +24,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="container mx-auto px-6"
           >
-            <h1 className="text-6xl font-bold mb-4">About Class RQ '21</h1>
+            <h1 className="text-6xl font-bold mb-4">About Class RQ &aptos;21</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
               We are a dynamic group of Computer Science students, dedicated to learning
               and growing together in our academic journey.
@@ -44,7 +44,7 @@ export default function AboutPage() {
           >
             {[
               { icon: FaLightbulb, title: "Learning", description: "Embracing new knowledge and skills" },
-              { icon: FaUsers, title: "Collaboration", description: "Supporting each other's growth" },
+              { icon: FaUsers, title: "Collaboration", description: "Supporting each other&aptos;s growth" },
               { icon: FaRocket, title: "Achievement", description: "Striving for academic excellence" },
               { icon: FaCode, title: "Practice", description: "Hands-on programming experience" }
             ].map((value, index) => (
@@ -76,11 +76,11 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-300 mb-6">
                 Established in 2021, our class began with a diverse group of aspiring 
-                computer science students. We've grown together through challenging 
+                computer science students. We&aptos;ve grown together through challenging 
                 coursework and exciting projects.
               </p>
               <p className="text-gray-300">
-                Today, we're a close-knit community of future tech professionals, 
+                Today, we&aptos;re a close-knit community of future tech professionals, 
                 supporting each other in our academic and personal growth.
               </p>
             </motion.div>
@@ -137,8 +137,8 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold mb-6">Join Our Class</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Whether you're a freshman or a senior, there's always room to learn and 
-              grow together. Let's make our academic journey memorable.
+              Whether you&aptos;re a freshman or a senior, there&aptos;s always room to learn and 
+              grow together. Let&aptos;s make our academic journey memorable.
             </p>
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full
               hover:scale-105 transition-all duration-300">

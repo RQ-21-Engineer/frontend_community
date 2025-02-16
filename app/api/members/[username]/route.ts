@@ -1,12 +1,13 @@
-import { members } from '@/data/members';
+import { members, slugify } from '@/data/members';
 import { NextResponse } from 'next/server';
 
 export async function GET(
   request: Request,
   { params }: { params: { username: string } }
 ) {
-  const member = members.find(m => m.github === params.username);
-  
+  const member = members.find(m => slugify(m.name) === params.username);
+  // Find by comparing slugified version of name with param
+
   if (!member) {
     return new NextResponse('Member not found', { status: 404 });
   }

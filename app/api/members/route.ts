@@ -1,4 +1,4 @@
-import { members } from '@/data/members';
+import { members, slugify } from '@/data/members';
 import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
@@ -7,8 +7,8 @@ export async function GET(request: Request) {
 
   if (query) {
     const filtered = members.filter(member => 
-      member.name.toLowerCase().includes(query) ||
-      member.skills.some(skill => skill.toLowerCase().includes(query))
+      member.name.toLowerCase().includes(query) ||  // Search original name
+      slugify(member.name).includes(query)         // Also search slugified version
     );
     return NextResponse.json(filtered);
   }

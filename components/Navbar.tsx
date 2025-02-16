@@ -14,7 +14,7 @@ export default function Navbar() {
           height={40}
           className="object-contain"
         />
-        <span className="font-bold text-xl">RQ '21</span>
+        <span className="font-bold text-xl">RQ &aptos;21</span>
       </Link>
       
       <div className="flex space-x-8">

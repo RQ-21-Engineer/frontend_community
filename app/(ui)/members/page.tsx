@@ -3,14 +3,8 @@ import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import type { Member, ShapeType } from '@/data/members';
-
-const shapes: Record<ShapeType, string> = {
-    hexagon: 'clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-    circle: 'rounded-full',
-    rectangle: 'rounded-xl',
-    triangle: 'clip-path: polygon(50% 0%, 100% 100%, 0% 100%)',
-};
+import type { Member } from '@/data/members';
+import { slugify } from '@/data/members';
 
 const transformStyles = [
     { origin: 'origin-center', translate: 'translate-y-2 rotate-2' },
@@ -24,11 +18,9 @@ const transformStyles = [
 export default function MembersPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [members, setMembers] = useState<Member[]>([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchMembers = async () => {
-            setLoading(true);
             try {
                 const url = searchTerm
                     ? `/api/members?search=${encodeURIComponent(searchTerm)}`
@@ -38,8 +30,6 @@ export default function MembersPage() {
                 setMembers(data);
             } catch (error) {
                 console.error('Error fetching members:', error);
-            } finally {
-                setLoading(false);
             }
         };
 
@@ -96,7 +86,7 @@ export default function MembersPage() {
                                     transition: { duration: 0.3, ease: "easeOut" }
                                 }}
                             >
-                                <Link href={`/members/${member.github}`}>
+                                <Link href={`/members/${slugify(member.name)}`}>
                                     <div className="bg-zinc-900 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-zinc-800">
                                         <div className="relative">
                                             <div className="aspect-w-1 aspect-h-1">
@@ -104,7 +94,7 @@ export default function MembersPage() {
                                                     src={member.image}
                                                     alt={member.name}
                                                     fill
-                                                    className={`object-cover transition-transform duration-300 group-hover:scale-105 ${shapes[member.shape as ShapeType]}`}
+                                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                                                 />
                                             </div>
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

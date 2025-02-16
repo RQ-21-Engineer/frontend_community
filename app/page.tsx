@@ -10,7 +10,7 @@ export default function Home() {
         <section className="py-20 px-6 ml-10 mt-10">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl">
-              <h1 className="text-6xl font-bold mb-4 text-left">Class RQ '21</h1>
+              <h1 className="text-6xl font-bold mb-4 text-left">Class RQ &aptos;21</h1>
               <h2 className="text-3xl mb-8 text-left text-gray-700">
                 Computer Science & Engineering.
               </h2>
@@ -31,7 +31,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center px-6">
               <div className="order-2 md:order-1">
                 <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Welcome to RQ '21 Software Engineering Club
+                  Welcome to RQ &aptos;21 Software Engineering Club
                 </h2>
                 <p className="text-zinc-300 leading-relaxed mb-6">
                   Where we are dedicated to advancing technology and fostering innovation in the engineering community.
@@ -141,7 +141,7 @@ export default function Home() {
                   linkText: "View gallery",
                   icon: "📸"
                 }
-              ].map((item, index) => (
+              ].map((item) => (
                 <div key={item.title}
                   className={`p-8 rounded-xl bg-zinc-900 border border-zinc-800`}>
                   <div className="text-4xl mb-6">{item.icon}</div>
@@ -163,7 +163,7 @@ export default function Home() {
         <section className="bg-zinc-950 py-16 px-8 text-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Class FAQs</h2>
-            <p className="mb-8">What's happening in our class?</p>
+            <p className="mb-8">What&aptos;s happening in our class?</p>
             <p className="mb-8">Join our class discussions and activities.</p>
             <form className="max-w-md mx-auto">
               <input
