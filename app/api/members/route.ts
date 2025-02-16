@@ -1,14 +1,15 @@
-import { members, slugify } from '@/data/members';
-import { NextResponse } from 'next/server';
+import { members, slugify } from "@/data/members";
+import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const query = searchParams.get('search')?.toLowerCase();
+  const query = searchParams.get("search")?.toLowerCase();
 
   if (query) {
-    const filtered = members.filter(member => 
-      member.name.toLowerCase().includes(query) ||  // Search original name
-      slugify(member.name).includes(query)         // Also search slugified version
+    const filtered = members.filter(
+      (member) =>
+        member.name.toLowerCase().includes(query) ||
+        slugify(member.name).includes(query)
     );
     return NextResponse.json(filtered);
   }

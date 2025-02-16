@@ -1,16 +1,22 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaGithub, FaGlobe, FaArrowLeft } from 'react-icons/fa';
-import type { Member } from '@/data/members';
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub, FaGlobe, FaArrowLeft } from "react-icons/fa";
+import type { Member } from "@/data/members";
 
 async function getMemberData(username: string): Promise<Member> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/members/${username}`);
-  if (!res.ok) throw new Error('Failed to fetch member');
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/members/${username}`
+  );
+  if (!res.ok) throw new Error("Failed to fetch member");
   return res.json();
 }
 
-export default async function MemberPage({ params }: { params: { username: string } }) {
-  const member = await getMemberData(params.username);
+export default async function MemberPage({
+  params,
+}: {
+  params: Promise<{ username: string }>;
+}) {
+  const member = await getMemberData((await params).username);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -87,14 +93,18 @@ export default async function MemberPage({ params }: { params: { username: strin
 
             {member.projects && member.projects.length > 0 && (
               <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
-                <h2 className="text-2xl font-bold mb-6 text-blue-400">Projects</h2>
+                <h2 className="text-2xl font-bold mb-6 text-blue-400">
+                  Projects
+                </h2>
                 <div className="space-y-4">
                   {member.projects.map((project) => (
                     <div
                       key={project.id}
                       className="p-6 bg-zinc-800/50 rounded-xl hover:bg-zinc-800 transition-colors"
                     >
-                      <h3 className="text-xl font-semibold mb-2 text-blue-300">{project.name}</h3>
+                      <h3 className="text-xl font-semibold mb-2 text-blue-300">
+                        {project.name}
+                      </h3>
                       <p className="text-zinc-400">{project.description}</p>
                     </div>
                   ))}
@@ -137,7 +147,9 @@ export default async function MemberPage({ params }: { params: { username: strin
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-xl hover:bg-zinc-900 transition-all group"
                 >
-                  <span className="text-zinc-300 group-hover:text-white">GitHub Profile</span>
+                  <span className="text-zinc-300 group-hover:text-white">
+                    GitHub Profile
+                  </span>
                   <FaGithub className="text-zinc-400 group-hover:text-blue-400" />
                 </a>
                 {member.website && (
@@ -147,7 +159,9 @@ export default async function MemberPage({ params }: { params: { username: strin
                     rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-xl hover:bg-zinc-900 transition-all group"
                   >
-                    <span className="text-zinc-300 group-hover:text-white">Personal Website</span>
+                    <span className="text-zinc-300 group-hover:text-white">
+                      Personal Website
+                    </span>
                     <FaGlobe className="text-zinc-400 group-hover:text-blue-400" />
                   </a>
                 )}

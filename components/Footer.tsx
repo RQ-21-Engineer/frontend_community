@@ -5,33 +5,33 @@ import {
   FaDiscord,
   FaInstagram,
   FaYoutube,
-  FaArrowRight
+  FaArrowRight,
 } from "react-icons/fa";
 
 const socialLinks = [
   {
-    name: 'GitHub',
+    name: "GitHub",
     icon: FaGithub,
-    href: 'https://github.com/rq21-se',
-    hoverColor: 'hover:text-gray-100'
+    href: "https://github.com/rq21-se",
+    hoverColor: "hover:text-gray-100",
   },
   {
-    name: 'Discord',
+    name: "Discord",
     icon: FaDiscord,
-    href: 'https://discord.gg/rq21se',
-    hoverColor: 'hover:text-indigo-400'
+    href: "https://discord.gg/rq21se",
+    hoverColor: "hover:text-indigo-400",
   },
   {
-    name: 'Instagram',
+    name: "Instagram",
     icon: FaInstagram,
-    href: 'https://instagram.com/rq21.se',
-    hoverColor: 'hover:text-pink-400'
+    href: "https://instagram.com/rq21.se",
+    hoverColor: "hover:text-pink-400",
   },
   {
-    name: 'YouTube',
+    name: "YouTube",
     icon: FaYoutube,
-    href: 'https://youtube.com/@rq21se',
-    hoverColor: 'hover:text-red-400'
+    href: "https://youtube.com/@rq21se",
+    hoverColor: "hover:text-red-400",
   },
 ];
 
@@ -50,7 +50,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-zinc-400 leading-relaxed">
-              Empowering the next generation of software engineers through community, learning, and innovation.
+              Empowering the next generation of software engineers through
+              community, learning, and innovation.
             </p>
           </div>
 
@@ -59,11 +60,11 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                { href: '/about', label: 'About Us' },
-                { href: '/members', label: 'Our Members' },
-                { href: '/projects', label: 'Projects' },
-                { href: '/learning', label: 'Learning Path' },
-              ].map(link => (
+                { href: "/about", label: "About Us" },
+                { href: "/members", label: "Our Members" },
+                { href: "/projects", label: "Projects" },
+                { href: "/learning", label: "Learning Path" },
+              ].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -117,13 +118,20 @@ export default function Footer() {
         <div className="pt-8 mt-8 border-t border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-zinc-400">
-              © {new Date().getFullYear()} RQ &aptos;21 Software Engineering Club. All rights reserved.
+              © {new Date().getFullYear()} RQ &aptos;21 Software Engineering
+              Club. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-zinc-400 hover:text-blue-400 transition-colors">
+              <Link
+                href="/privacy"
+                className="text-sm text-zinc-400 hover:text-blue-400 transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-zinc-400 hover:text-blue-400 transition-colors">
+              <Link
+                href="/terms"
+                className="text-sm text-zinc-400 hover:text-blue-400 transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>

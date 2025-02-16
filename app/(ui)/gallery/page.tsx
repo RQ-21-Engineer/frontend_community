@@ -1,37 +1,43 @@
-'use client';
-import { useState } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+"use client";
 
-// Sample gallery data - replace with your actual images
+import { useState } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 const galleryItems = [
   {
     id: 1,
-    title: 'Class Photo 2021',
-    description: 'First day of our journey together',
-    image: '/gallery/class-photo.jpg',
-    category: 'Class Photos'
+    title: "Class Photo 2021",
+    description: "First day of our journey together",
+    image: "/gallery/class-photo.jpg",
+    category: "Class Photos",
   },
   {
     id: 2,
-    title: 'Coding Competition',
-    description: 'Annual hackathon event',
-    image: '/gallery/coding-event.jpg',
-    category: 'Events'
+    title: "Coding Competition",
+    description: "Annual hackathon event",
+    image: "/gallery/coding-event.jpg",
+    category: "Events",
   },
-  // Add more gallery items as needed
 ];
 
-const categories = ['All', 'Class Photos', 'Events', 'Study Sessions', 'Campus Life'];
+const categories = [
+  "All",
+  "Class Photos",
+  "Events",
+  "Study Sessions",
+  "Campus Life",
+];
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredImages = activeCategory === 'All' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredImages =
+    activeCategory === "All"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-black text-white py-16">
@@ -61,8 +67,8 @@ export default function GalleryPage() {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-zinc-900 text-zinc-400 hover:bg-purple-600/20 hover:text-purple-400'
+                  ? "bg-purple-600 text-white"
+                  : "bg-zinc-900 text-zinc-400 hover:bg-purple-600/20 hover:text-purple-400"
               }`}
             >
               {category}
@@ -73,7 +79,7 @@ export default function GalleryPage() {
 
       {/* Gallery Grid */}
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
@@ -122,12 +128,14 @@ export default function GalleryPage() {
             >
               <FaTimes size={24} />
             </button>
-            
+
             <button
               className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white"
               onClick={(e) => {
                 e.stopPropagation();
-                const currentIndex = galleryItems.findIndex(item => item.id === selectedImage);
+                const currentIndex = galleryItems.findIndex(
+                  (item) => item.id === selectedImage
+                );
                 const prevImage = galleryItems[currentIndex - 1];
                 if (prevImage) setSelectedImage(prevImage.id);
               }}
@@ -139,7 +147,9 @@ export default function GalleryPage() {
               className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white"
               onClick={(e) => {
                 e.stopPropagation();
-                const currentIndex = galleryItems.findIndex(item => item.id === selectedImage);
+                const currentIndex = galleryItems.findIndex(
+                  (item) => item.id === selectedImage
+                );
                 const nextImage = galleryItems[currentIndex + 1];
                 if (nextImage) setSelectedImage(nextImage.id);
               }}
@@ -148,10 +158,16 @@ export default function GalleryPage() {
             </button>
 
             <div className="relative max-w-4xl max-h-[80vh] w-full aspect-video">
-              {galleryItems.find(item => item.id === selectedImage) && (
+              {galleryItems.find((item) => item.id === selectedImage) && (
                 <Image
-                  src={galleryItems.find(item => item.id === selectedImage)!.image}
-                  alt={galleryItems.find(item => item.id === selectedImage)!.title}
+                  src={
+                    galleryItems.find((item) => item.id === selectedImage)!
+                      .image
+                  }
+                  alt={
+                    galleryItems.find((item) => item.id === selectedImage)!
+                      .title
+                  }
                   fill
                   className="object-contain"
                 />

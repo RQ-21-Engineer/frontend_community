@@ -5,21 +5,33 @@ import { FaInstagram, FaYoutube, FaDiscord, FaGithub } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
-
       <main className="flex-1">
         <section className="py-20 px-6 ml-10 mt-10">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl">
-              <h1 className="text-6xl font-bold mb-4 text-left">Class RQ &aptos;21</h1>
+              <h1 className="text-6xl font-bold mb-4 text-left">
+                Class RQ &aptos;21
+              </h1>
               <h2 className="text-3xl mb-8 text-left text-gray-700">
                 Computer Science & Engineering.
               </h2>
-              <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full
+              <button
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full
                 transform transition-all duration-300 hover:scale-105 hover:shadow-lg
-                hover:animate-none flex items-center space-x-2">
+                hover:animate-none flex items-center space-x-2"
+              >
                 <span>Join With Us!</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </button>
             </div>
@@ -34,21 +46,44 @@ export default function Home() {
                   Welcome to RQ &aptos;21 Software Engineering Club
                 </h2>
                 <p className="text-zinc-300 leading-relaxed mb-6">
-                  Where we are dedicated to advancing technology and fostering innovation in the engineering community.
+                  Where we are dedicated to advancing technology and fostering
+                  innovation in the engineering community.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="bg-zinc-900 p-2 rounded-full">
-                      <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-5 h-5 text-blue-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </div>
-                    <p className="text-zinc-300">Find valuable projects and resources</p>
+                    <p className="text-zinc-300">
+                      Find valuable projects and resources
+                    </p>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="bg-zinc-900 p-2 rounded-full">
-                      <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      <svg
+                        className="w-5 h-5 text-purple-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                        />
                       </svg>
                     </div>
                     <p className="text-zinc-300">Grow as a tech professional</p>
@@ -81,41 +116,47 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  name: 'Instagram',
+                  name: "Instagram",
                   icon: FaInstagram,
-                  color: 'from-pink-500 to-purple-500',
-                  link: 'https://instagram.com/rq21.se'
+                  color: "from-pink-500 to-purple-500",
+                  link: "https://instagram.com/rq21.se",
                 },
                 {
-                  name: 'Youtube',
+                  name: "Youtube",
                   icon: FaYoutube,
-                  color: 'from-red-500 to-pink-500',
-                  link: 'https://youtube.com/@rq21se'
+                  color: "from-red-500 to-pink-500",
+                  link: "https://youtube.com/@rq21se",
                 },
                 {
-                  name: 'Discord',
+                  name: "Discord",
                   icon: FaDiscord,
-                  color: 'from-indigo-500 to-purple-500',
-                  link: 'https://discord.gg/rq21se'
+                  color: "from-indigo-500 to-purple-500",
+                  link: "https://discord.gg/rq21se",
                 },
                 {
-                  name: 'Github',
+                  name: "Github",
                   icon: FaGithub,
-                  color: 'from-gray-700 to-gray-900',
-                  link: 'https://github.com/rq21-se'
-                }
+                  color: "from-gray-700 to-gray-900",
+                  link: "https://github.com/rq21-se",
+                },
               ].map((platform) => (
                 <Link
                   href={platform.link}
                   key={platform.name}
                   className="group hover:scale-105 transition-all duration-300"
                 >
-                  <div className={`p-6 rounded-xl bg-gradient-to-br ${platform.color} shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <div
+                    className={`p-6 rounded-xl bg-gradient-to-br ${platform.color} shadow-lg hover:shadow-xl transition-all duration-300`}
+                  >
                     <div className="text-3xl mb-4 text-white">
                       <platform.icon size={32} />
                     </div>
-                    <h3 className="text-xl text-white font-bold mb-2">{platform.name}</h3>
-                    <p className="text-sm text-gray-100">Follow us on {platform.name}</p>
+                    <h3 className="text-xl text-white font-bold mb-2">
+                      {platform.name}
+                    </h3>
+                    <p className="text-sm text-gray-100">
+                      Follow us on {platform.name}
+                    </p>
                   </div>
                 </Link>
               ))}
@@ -132,26 +173,42 @@ export default function Home() {
                   description: "Meet our talented classmates.",
                   link: "/members",
                   linkText: "View all students",
-                  icon: "👨‍🎓"
+                  icon: "👨‍🎓",
                 },
                 {
                   title: "Our Gallery",
                   description: "Capture our precious moments.",
                   link: "/gallery",
                   linkText: "View gallery",
-                  icon: "📸"
-                }
+                  icon: "📸",
+                },
               ].map((item) => (
-                <div key={item.title}
-                  className={`p-8 rounded-xl bg-zinc-900 border border-zinc-800`}>
+                <div
+                  key={item.title}
+                  className={`p-8 rounded-xl bg-zinc-900 border border-zinc-800`}
+                >
                   <div className="text-4xl mb-6">{item.icon}</div>
-                  <h3 className="text-2xl text-white font-bold mb-4">{item.title}</h3>
+                  <h3 className="text-2xl text-white font-bold mb-4">
+                    {item.title}
+                  </h3>
                   <p className="mb-6 text-zinc-400">{item.description}</p>
-                  <Link href={item.link}
-                    className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors">
+                  <Link
+                    href={item.link}
+                    className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors"
+                  >
                     {item.linkText}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </Link>
                 </div>

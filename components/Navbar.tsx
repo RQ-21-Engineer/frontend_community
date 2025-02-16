@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "@/public/logo3.09793be1157929fdb87ed85ea9899a4a.svg"
+import Logo from "@/public/logo3.09793be1157929fdb87ed85ea9899a4a.svg";
 
 export default function Navbar() {
   return (
@@ -16,18 +16,18 @@ export default function Navbar() {
         />
         <span className="font-bold text-xl">RQ &aptos;21</span>
       </Link>
-      
+
       <div className="flex space-x-8">
         {[
-          { href: '/about', label: 'About Us' },
-          { href: '/#social-media', label: 'Social Media' },
-          { href: '/members', label: 'Members' },
-          { href: '/gallery', label: 'Gallery' },
-          { href: '/learning', label: 'Learning Path' }
-        ].map(link => (
-          <Link 
-            key={link.href} 
-            href={link.href} 
+          { href: "/about", label: "About Us" },
+          { href: "/#social-media", label: "Social Media" },
+          { href: "/members", label: "Members" },
+          { href: "/gallery", label: "Gallery" },
+          { href: "/learning", label: "Learning Path" },
+        ].map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
             className="text-zinc-300 hover:text-blue-400 transition-colors"
           >
             {link.label}

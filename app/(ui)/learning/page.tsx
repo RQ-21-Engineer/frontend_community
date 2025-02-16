@@ -1,7 +1,8 @@
-'use client';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { FaBookOpen, FaCode, FaLaptopCode, FaBrain } from 'react-icons/fa';
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaBookOpen, FaCode, FaLaptopCode, FaBrain } from "react-icons/fa";
 
 const semesters = [
   {
@@ -10,22 +11,22 @@ const semesters = [
       {
         number: 1,
         subjects: [
-          { name: 'Introduction to Programming', credits: 3 },
-          { name: 'Calculus I', credits: 3 },
-          { name: 'Digital Logic', credits: 3 },
-          { name: 'English for Academic Purposes', credits: 2 },
-        ]
+          { name: "Introduction to Programming", credits: 3 },
+          { name: "Calculus I", credits: 3 },
+          { name: "Digital Logic", credits: 3 },
+          { name: "English for Academic Purposes", credits: 2 },
+        ],
       },
       {
         number: 2,
         subjects: [
-          { name: 'Object Oriented Programming', credits: 3 },
-          { name: 'Calculus II', credits: 3 },
-          { name: 'Computer Organization', credits: 3 },
-          { name: 'Technical Writing', credits: 2 },
-        ]
-      }
-    ]
+          { name: "Object Oriented Programming", credits: 3 },
+          { name: "Calculus II", credits: 3 },
+          { name: "Computer Organization", credits: 3 },
+          { name: "Technical Writing", credits: 2 },
+        ],
+      },
+    ],
   },
   {
     year: 2,
@@ -33,22 +34,22 @@ const semesters = [
       {
         number: 3,
         subjects: [
-          { name: 'Data Structures', credits: 3 },
-          { name: 'Linear Algebra', credits: 3 },
-          { name: 'Database Systems', credits: 3 },
-          { name: 'Web Programming', credits: 3 },
-        ]
+          { name: "Data Structures", credits: 3 },
+          { name: "Linear Algebra", credits: 3 },
+          { name: "Database Systems", credits: 3 },
+          { name: "Web Programming", credits: 3 },
+        ],
       },
       {
         number: 4,
         subjects: [
-          { name: 'Algorithms', credits: 3 },
-          { name: 'Operating Systems', credits: 3 },
-          { name: 'Software Engineering', credits: 3 },
-          { name: 'Computer Networks', credits: 3 },
-        ]
-      }
-    ]
+          { name: "Algorithms", credits: 3 },
+          { name: "Operating Systems", credits: 3 },
+          { name: "Software Engineering", credits: 3 },
+          { name: "Computer Networks", credits: 3 },
+        ],
+      },
+    ],
   },
   {
     year: 3,
@@ -56,22 +57,22 @@ const semesters = [
       {
         number: 5,
         subjects: [
-          { name: 'Artificial Intelligence', credits: 3 },
-          { name: 'Mobile Development', credits: 3 },
-          { name: 'Information Security', credits: 3 },
-          { name: 'Cloud Computing', credits: 3 },
-        ]
+          { name: "Artificial Intelligence", credits: 3 },
+          { name: "Mobile Development", credits: 3 },
+          { name: "Information Security", credits: 3 },
+          { name: "Cloud Computing", credits: 3 },
+        ],
       },
       {
         number: 6,
         subjects: [
-          { name: 'Machine Learning', credits: 3 },
-          { name: 'Distributed Systems', credits: 3 },
-          { name: 'Software Testing', credits: 3 },
-          { name: 'Tech Elective I', credits: 3 },
-        ]
-      }
-    ]
+          { name: "Machine Learning", credits: 3 },
+          { name: "Distributed Systems", credits: 3 },
+          { name: "Software Testing", credits: 3 },
+          { name: "Tech Elective I", credits: 3 },
+        ],
+      },
+    ],
   },
   {
     year: 4,
@@ -79,23 +80,23 @@ const semesters = [
       {
         number: 7,
         subjects: [
-          { name: 'Final Project I', credits: 4 },
-          { name: 'Data Science', credits: 3 },
-          { name: 'Tech Elective II', credits: 3 },
-          { name: 'Professional Ethics', credits: 2 },
-        ]
+          { name: "Final Project I", credits: 4 },
+          { name: "Data Science", credits: 3 },
+          { name: "Tech Elective II", credits: 3 },
+          { name: "Professional Ethics", credits: 2 },
+        ],
       },
       {
         number: 8,
         subjects: [
-          { name: 'Final Project II', credits: 4 },
-          { name: 'Tech Entrepreneurship', credits: 3 },
-          { name: 'Tech Elective III', credits: 3 },
-          { name: 'Career Development', credits: 2 },
-        ]
-      }
-    ]
-  }
+          { name: "Final Project II", credits: 4 },
+          { name: "Tech Entrepreneurship", credits: 3 },
+          { name: "Tech Elective III", credits: 3 },
+          { name: "Career Development", credits: 2 },
+        ],
+      },
+    ],
+  },
 ];
 
 export default function LearningPath() {
@@ -105,7 +106,7 @@ export default function LearningPath() {
     1: FaBookOpen,
     2: FaCode,
     3: FaLaptopCode,
-    4: FaBrain
+    4: FaBrain,
   };
 
   return (
@@ -139,21 +140,23 @@ export default function LearningPath() {
                 key={year}
                 className={`p-6 rounded-xl ${
                   activeYear === year
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-zinc-900 text-zinc-400'
+                    ? "bg-blue-600 text-white"
+                    : "bg-zinc-900 text-zinc-400"
                 } transition-all duration-300 hover:bg-blue-600/80 hover:text-white group`}
                 onClick={() => setActiveYear(year)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Icon className="w-8 h-8 mb-3 mx-auto" />
-                <h3 className="text-lg font-semibold text-center">Year {year}</h3>
+                <h3 className="text-lg font-semibold text-center">
+                  Year {year}
+                </h3>
                 <div className="mt-2 h-1 bg-blue-400/20 rounded-full overflow-hidden">
                   <div
                     className={`h-full ${
-                      activeYear === year ? 'bg-blue-400' : 'bg-transparent'
+                      activeYear === year ? "bg-blue-400" : "bg-transparent"
                     } transition-all duration-500`}
-                    style={{ width: '100%' }}
+                    style={{ width: "100%" }}
                   />
                 </div>
               </motion.button>
@@ -184,11 +187,15 @@ export default function LearningPath() {
                     Semester {semester.number}
                   </h3>
                   <span className="px-4 py-1 rounded-full bg-blue-600/20 text-blue-400 text-sm">
-                    {semester.subjects.reduce((acc, curr) => acc + curr.credits, 0)} Credits
+                    {semester.subjects.reduce(
+                      (acc, curr) => acc + curr.credits,
+                      0
+                    )}{" "}
+                    Credits
                   </span>
                 </div>
               </div>
-              
+
               <div className="p-6 space-y-3">
                 {semester.subjects.map((subject, idx) => (
                   <motion.div
@@ -224,14 +231,27 @@ export default function LearningPath() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <h4 className="text-zinc-400 mb-2">Current Progress</h4>
-              <p className="text-3xl font-bold text-blue-400">Year {activeYear}</p>
+              <p className="text-3xl font-bold text-blue-400">
+                Year {activeYear}
+              </p>
             </div>
             <div>
               <h4 className="text-zinc-400 mb-2">Total Credits</h4>
               <p className="text-3xl font-bold text-blue-400">
-                {semesters.reduce((acc, year) => 
-                  acc + year.semesters.reduce((semAcc, sem) => 
-                    semAcc + sem.subjects.reduce((subAcc, sub) => subAcc + sub.credits, 0), 0), 0)}
+                {semesters.reduce(
+                  (acc, year) =>
+                    acc +
+                    year.semesters.reduce(
+                      (semAcc, sem) =>
+                        semAcc +
+                        sem.subjects.reduce(
+                          (subAcc, sub) => subAcc + sub.credits,
+                          0
+                        ),
+                      0
+                    ),
+                  0
+                )}
               </p>
             </div>
             <div>

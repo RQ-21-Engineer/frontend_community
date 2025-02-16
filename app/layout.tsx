@@ -9,19 +9,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+  ),
   title: "RQ '21 Software Engineering Club",
-  description: "RQ '21 Software Engineering Club - Building the future of technology together through collaboration, learning, and innovation",
-  keywords: ["software engineering", "programming", "coding club", "RQ21", "technology", "learning"],
+  description:
+    "RQ '21 Software Engineering Club - Building the future of technology together through collaboration, learning, and innovation",
+  keywords: [
+    "software engineering",
+    "programming",
+    "coding club",
+    "RQ21",
+    "technology",
+    "learning",
+  ],
   authors: [{ name: "RQ '21 Software Engineering Club" }],
   creator: "RQ '21 Software Engineering Club",
   publisher: "RQ '21 Software Engineering Club",
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   openGraph: {
     title: "RQ '21 Software Engineering Club",
-    description: "RQ '21 Software Engineering Club - Building the future of technology together",
+    description:
+      "RQ '21 Software Engineering Club - Building the future of technology together",
     // url: "https://rq21-sec.vercel.app",
     siteName: "RQ '21 Software Engineering Club",
     images: [
@@ -38,12 +54,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "RQ '21 Software Engineering Club",
-    description: "RQ '21 Software Engineering Club - Building the future of technology together",
+    description:
+      "RQ '21 Software Engineering Club - Building the future of technology together",
     images: ["/og-image.jpg"],
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
   },
   icons: {
     icon: "/favicon.ico",
