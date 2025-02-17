@@ -3,6 +3,8 @@ import Link from "next/link";
 import { FaGithub, FaGlobe, FaArrowLeft } from "react-icons/fa";
 import type { Member } from "@/data/members";
 
+export const runtime = "edge";
+
 async function getMemberData(username: string): Promise<Member> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/members/${username}`
