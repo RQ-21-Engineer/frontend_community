@@ -10,7 +10,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl">
               <h1 className="text-6xl font-bold mb-4 text-left">
-                Class RQ &aptos;21
+                Class RQ &apos;21
               </h1>
               <h2 className="text-3xl mb-8 text-left text-gray-700">
                 Computer Science & Engineering.
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center px-6">
               <div className="order-2 md:order-1">
                 <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Welcome to RQ &aptos;21 Software Engineering Club
+                  Welcome to RQ &apos;21 Software Engineering Club
                 </h2>
                 <p className="text-zinc-300 leading-relaxed mb-6">
                   Where we are dedicated to advancing technology and fostering

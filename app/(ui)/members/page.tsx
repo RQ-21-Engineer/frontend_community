@@ -69,7 +69,7 @@ export default function MembersPage() {
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
             Our Students
           </h1>
-          <p className="text-zinc-300 mb-8">Meet our talented classmates</p>
+          <p className="text-zinc-300 mb-8">Meet our talented classmate&apos;s</p>
           <input
             type="text"
             placeholder="Search by name or major..."

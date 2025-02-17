@@ -8,6 +8,8 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
+import ClassLogo from '@/public/logo3.09793be1157929fdb87ed85ea9899a4a.svg'
+
 const socialLinks = [
   {
     name: "GitHub",
@@ -44,9 +46,14 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo3.svg" alt="RQ '21" width={40} height={40} />
+              <Image
+                src={ClassLogo}
+                alt="RQ '21 Logo"
+                width={40}
+                height={40}
+              />
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                RQ &aptos;21
+                RQ &apos;21
               </span>
             </Link>
             <p className="text-sm text-zinc-400 leading-relaxed">
@@ -62,7 +69,7 @@ export default function Footer() {
               {[
                 { href: "/about", label: "About Us" },
                 { href: "/members", label: "Our Members" },
-                { href: "/projects", label: "Projects" },
+                { href: "/gallery", label: "Gallery" },
                 { href: "/learning", label: "Learning Path" },
               ].map((link) => (
                 <li key={link.href}>
@@ -118,7 +125,7 @@ export default function Footer() {
         <div className="pt-8 mt-8 border-t border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-zinc-400">
-              © {new Date().getFullYear()} RQ &aptos;21 Software Engineering
+              © {new Date().getFullYear()} RQ &apos;21 Software Engineering
               Club. All rights reserved.
             </p>
             <div className="flex space-x-6">

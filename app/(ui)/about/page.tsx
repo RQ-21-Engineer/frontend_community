@@ -26,7 +26,7 @@ export default function AboutPage() {
             className="container mx-auto px-6"
           >
             <h1 className="text-6xl font-bold mb-4">
-              About Class RQ &aptos;21
+              About Class RQ &apos;21
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl">
               We are a dynamic group of Computer Science students, dedicated to
@@ -54,7 +54,7 @@ export default function AboutPage() {
               {
                 icon: FaUsers,
                 title: "Collaboration",
-                description: "Supporting each other&aptos;s growth",
+                description: "Supporting each other&apos;s growth",
               },
               {
                 icon: FaRocket,
@@ -95,11 +95,11 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-300 mb-6">
                 Established in 2021, our class began with a diverse group of
-                aspiring computer science students. We&aptos;ve grown together
+                aspiring computer science students. We&apos;ve grown together
                 through challenging coursework and exciting projects.
               </p>
               <p className="text-gray-300">
-                Today, we&aptos;re a close-knit community of future tech
+                Today, we&apos;re a close-knit community of future tech
                 professionals, supporting each other in our academic and
                 personal growth.
               </p>
@@ -159,8 +159,8 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold mb-6">Join Our Class</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Whether you&aptos;re a freshman or a senior, there&aptos;s always
-              room to learn and grow together. Let&aptos;s make our academic
+              Whether you&apos;re a freshman or a senior, there&apos;s always
+              room to learn and grow together. Let&apos;s make our academic
               journey memorable.
             </p>
             <button
