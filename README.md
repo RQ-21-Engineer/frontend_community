@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎭 Frontend Community: Where Bugs Fear to Tread
 
-## Getting Started
+This is yet another [Next.js](https://nextjs.org) project that survived `create-next-app` (and we're pretty proud of that 😎).
 
-First, run the development server:
+## 🌟 Our Versions (Because One Is Never Enough)
+
+- V1: [https://rq21.netlify.app/](https://rq21.netlify.app/) - The OG version, like Pizza v1.0
+- V2: [https://rq2021.pages.dev](https://rq2021.pages.dev) - The sequel (and you know sequels are always better, right? Right? 🤔)
+
+## 🚀 Getting Started (Or: How to Make Your Computer Angry)
+
+First, summon the development server with your favorite incantation:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev    # The classic way
+yarn dev       # The hipster way
+pnpm dev       # The space-saving way
+bun dev        # The new kid on the block
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, point your favorite browser to [http://localhost:3000](http://localhost:3000) and pray to the demo gods 🙏
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💅 Features That Make Us Special
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Built with Next.js (because regular JS wasn't complicated enough)
+- Uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) with Geist font (because Times New Roman is so 1994)
+- Auto-updates while you code (like magic, but with more console errors)
 
-## Learn More
+## 📚 Learn More (If You Really Want To)
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Docs](https://nextjs.org/docs) - When you need to sound smart in meetings
+- [Learn Next.js](https://nextjs.org/learn) - For when Stack Overflow isn't enough
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+We use [Vercel](https://vercel.com) (V2) and [Netlify](https://netlify.com) (V1) because choosing one platform would be too mainstream.
 
-## Deploy on Vercel
+Remember: In development, everything works. In production, it's an adventure! 🎢
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Made with ☕️ and questionable life choices*
