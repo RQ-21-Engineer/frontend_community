@@ -5,11 +5,9 @@ export const runtime = "edge";
 
 export async function GET(
   request: NextRequest,
-  context: { params: { username: string } }
+  { params }: { params: Promise<{ username: string }> }
 ) {
-  const member = members.find(
-    (m) => slugify(m.name) === context.params.username
-  );
+  const member = members.find(async (m) => slugify(m.name) === (await params).username);
 
   if (!member) {
     return new NextResponse("Member not found", { status: 404 });
