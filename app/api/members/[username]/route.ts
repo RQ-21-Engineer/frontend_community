@@ -1,11 +1,15 @@
 import { members, slugify } from "@/data/members";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+
+export const runtime = "edge";
 
 export async function GET(
-  request: Request,
-  { params }: { params: { username: string } }
+  request: NextRequest,
+  context: { params: { username: string } }
 ) {
-  const member = members.find((m) => slugify(m.name) === params.username);
+  const member = members.find(
+    (m) => slugify(m.name) === context.params.username
+  );
 
   if (!member) {
     return new NextResponse("Member not found", { status: 404 });
