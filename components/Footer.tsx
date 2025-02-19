@@ -39,10 +39,10 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 text-zinc-300 pt-16 pb-8 px-6 border-t border-zinc-800">
+    <footer className="bg-zinc-950 text-zinc-300 pt-16 pb-8 px-4 sm:px-6 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
@@ -63,8 +63,8 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               {[
                 { href: "/about", label: "About Us" },
@@ -86,8 +86,8 @@ export default function Footer() {
           </div>
 
           {/* Community */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Community</h3>
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">Community</h3>
             <ul className="space-y-4">
               {socialLinks.map(({ name, icon: Icon, href, hoverColor }) => (
                 <li key={name}>
@@ -106,8 +106,8 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">Stay Updated</h3>
             <form className="space-y-3">
               <input
                 type="email"
@@ -123,8 +123,8 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="pt-8 mt-8 border-t border-zinc-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-zinc-400">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-sm text-zinc-400 text-center sm:text-left">
               © {new Date().getFullYear()} RQ &apos;21 Software Engineering
               Club. All rights reserved.
             </p>

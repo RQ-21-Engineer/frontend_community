@@ -73,9 +73,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased bg-black min-h-screen`}>
         <Navbar />
-        {children}
+        <div className="pt-[84px]">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

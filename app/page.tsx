@@ -4,19 +4,20 @@ import { FaInstagram, FaYoutube, FaDiscord, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen bg-black text-white -mt-[84px] pt-44">
       <main className="flex-1">
-        <section className="py-20 px-6 ml-10 mt-10">
+        {/* Hero Section */}
+        <section className="py-12 sm:py-20 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="max-w-2xl">
-              <h1 className="text-6xl font-bold mb-4 text-left">
+            <div className="max-w-2xl px-4 sm:px-0">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-left">
                 Class RQ &apos;21
               </h1>
-              <h2 className="text-3xl mb-8 text-left text-gray-700">
+              <h2 className="text-2xl sm:text-3xl mb-8 text-left text-gray-700">
                 Computer Science & Engineering.
               </h2>
               <button
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full
                 transform transition-all duration-300 hover:scale-105 hover:shadow-lg
                 hover:animate-none flex items-center space-x-2"
               >
@@ -38,11 +39,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20">
+        {/* About Section */}
+        <section className="py-12 sm:py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center px-6">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 sm:px-6">
               <div className="order-2 md:order-1">
-                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                   Welcome to RQ &apos;21 Software Engineering Club
                 </h2>
                 <p className="text-zinc-300 leading-relaxed mb-6">
@@ -94,11 +96,11 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg transform rotate-6 opacity-20"></div>
                   <Image
-                    src="/community.jpg" // Add this image to your public folder
+                    src="/community.jpg"
                     alt="Community"
                     width={600}
                     height={400}
-                    className="rounded-lg shadow-xl relative z-10"
+                    className="rounded-lg shadow-xl relative z-10 w-full"
                   />
                 </div>
               </div>
@@ -106,14 +108,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="social-media" className="py-20 bg-zinc-950">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-16 relative">
+        {/* Social Media Section */}
+        <section id="social-media" className="py-12 sm:py-20 bg-zinc-950">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 relative">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Social Media
               </span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {[
                 {
                   name: "Instagram",
@@ -164,9 +167,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-16">
+        {/* Features Section */}
+        <section className="py-12 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
               {[
                 {
                   title: "Our Class",
@@ -185,7 +189,7 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className={`p-8 rounded-xl bg-zinc-900 border border-zinc-800`}
+                  className="p-6 sm:p-8 rounded-xl bg-zinc-900 border border-zinc-800"
                 >
                   <div className="text-4xl mb-6">{item.icon}</div>
                   <h3 className="text-2xl text-white font-bold mb-4">
@@ -217,18 +221,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-zinc-950 py-16 px-8 text-white">
+        {/* FAQ Section */}
+        <section className="bg-zinc-950 py-12 sm:py-16 px-4 sm:px-8 text-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">Class FAQs</h2>
-            <p className="mb-8">What&aptos;s happening in our class?</p>
-            <p className="mb-8">Join our class discussions and activities.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Class FAQs</h2>
+            <p className="mb-6 sm:mb-8">What&apos;s happening in our class?</p>
+            <p className="mb-6 sm:mb-8">Join our class discussions and activities.</p>
             <form className="max-w-md mx-auto">
               <input
                 type="text"
                 placeholder="Your Student ID..."
                 className="w-full p-3 rounded mb-4 bg-zinc-900 text-white placeholder-zinc-500 border border-zinc-800"
               />
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-full w-full hover:bg-blue-700">
+              <button className="w-full bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
                 Join Class Group
               </button>
             </form>
